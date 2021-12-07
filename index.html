@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Listagem de produtos</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Listagem de Produtos - OAK</h1>
+    </header>
+
+    <main>
+        <div id="title">
+            <h2>Produtos</h2>
+            <span>Cadastro dos produtos</span>
+        </div>
+
+        <div id="card">
+            <div id="line-input">
+                <label>Nome do produto</label>
+                <input type="text" id="product" placeholder="Digite o nome do produto">
+                <label>Descrição do Produto</label>
+                <input type="text" id="description" placeholder="Digite o nome do produto">
+                <label>Valor do Produto</label>
+                <input type="number" id="price" placeholder="Digite o nome do produto">
+                <div id="disponibility">
+                    <label>Disponivel? (Obrigatório)</label>
+                    <br>
+                    <input type="radio" value="Sim" name="disp_prod" required>Sim
+                    <input type="radio" value="Não" name="disp_prod">Não
+                </div>
+            </div>
+            <button onclick='prod.save()'>Salvar</button>
+            <button onclick='prod.clear()'>Limpar</button>
+        </div>
+
+        <div id="content">
+            <table>
+                <thead>
+                    <th>ID</th>
+                    <th>Nome do produto</th>
+                    <th>Valor</th>
+                    <th>Produto disponível</th>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
